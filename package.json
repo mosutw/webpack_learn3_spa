@@ -1,0 +1,21 @@
+{
+  "name": "spa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --devtool eval --hot --progress --colors --content-base --display-error-details --host 0.0.0.0 --port 8090 build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^6.2.1",
+    "babel-loader": "^6.2.0",
+    "babel-preset-react": "^6.1.18",
+    "css-loader": "^0.23.0",
+    "react": "^0.14.3",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.9"
+  }
+}
