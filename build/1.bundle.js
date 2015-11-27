@@ -1,0 +1,1 @@
+webpackJsonp([1],{35:function(e,n,r){var a=r(24),o=a.createClass({displayName:"Home",render:function(){return a.createElement("h1",null,"Welcome Home!")}});e.exports=o}});

@@ -1,13 +1,14 @@
+var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
     entry: {
-        app: ['webpack/hot/dev-server', './app/main.jsx'],
+        app: ['webpack/hot/dev-server','./app/main.jsx'],
         Home: ['./app/Home.jsx'],
         Admin: ['./app/Admin.jsx']
     },
     output: {
-        path: './build',
+        path: path.resolve(__dirname,'build'),
         filename: 'bundle.js'
     },
     module:{
@@ -15,9 +16,8 @@ module.exports = {
             {
                 test: /\.jsx$/, 
                 loader: 'babel-loader',
-                query: {
-                    presets:['react']
-                }
+                exclude: /node_modules/,
+                query: { presets:['react'] }
             },
             {
                 test:  /\.css$/,
@@ -25,8 +25,8 @@ module.exports = {
             }
         ]
     },
-    plugins: [
-        new webpack.optimize.CommonsChunkPlugin('common.js',2)]
+
+    plugins: [ new webpack.optimize.CommonsChunkPlugin('common.js',2)]
 };
 
 
